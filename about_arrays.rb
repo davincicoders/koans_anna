@@ -17,15 +17,15 @@ class AboutArrays < Neo::Koan
     array[1] = 2
     assert_equal [1, 2], array
 
-    array << 444
-    assert_equal __, array
+    array << 333
+    assert_equal [1,2,333], array
   end
 
   def test_accessing_array_elements
-    array = [:jelly, :peanut, :butter, :and]
+    array = [:peanut, :butter, :and, :jelly]
 
-    assert_equal __, array[0]
-    assert_equal __, array.first
+    assert_equal :peanut, array[0]
+    assert_equal :peanut, array.first
     assert_equal __, array[3]
     assert_equal __, array.last
     assert_equal __, array[-1]
@@ -37,9 +37,9 @@ class AboutArrays < Neo::Koan
 
     assert_equal __, array[0,1]
     assert_equal __, array[0,2]
-    assert_equal [:and, :jelly], array[2,2]
-    assert_equal [:and, :jelly], array[2,20]
-    assert_equal [], array[4,0]
+    assert_equal __, array[2,2]
+    assert_equal __, array[2,20]
+    assert_equal __, array[4,0]
     assert_equal __, array[4,100]
     assert_equal __, array[5,0]
   end
@@ -52,7 +52,7 @@ class AboutArrays < Neo::Koan
   end
 
   def test_slicing_with_ranges
-    array = [:jelly, :peanut, :butter, :and]
+    array = [:peanut, :butter, :and, :jelly]
 
     assert_equal __, array[0..2]
     assert_equal __, array[0...2]
