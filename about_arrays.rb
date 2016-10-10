@@ -52,7 +52,7 @@ class AboutArrays < Neo::Koan
   end
 
   def test_slicing_with_ranges
-    array = [:peanut, :butter, :and, :jelly]
+    array = [:jelly, :peanut, :butter, :and]
 
     assert_equal __, array[0..2]
     assert_equal __, array[0...2]
