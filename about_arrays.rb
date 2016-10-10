@@ -17,12 +17,12 @@ class AboutArrays < Neo::Koan
     array[1] = 2
     assert_equal [1, __], array
 
-    array << 333
+    array << 444
     assert_equal __, array
   end
 
   def test_accessing_array_elements
-    array = [:peanut, :butter, :and, :jelly]
+    array = [:jelly, :peanut, :butter, :and]
 
     assert_equal __, array[0]
     assert_equal __, array.first
